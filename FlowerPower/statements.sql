@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS Medewerker (
 
 CREATE TABLE IF NOT EXISTS Factuurregel (
     Factuurnummer int,
-    Artikelcode varchar(50),
+    Artikelcode int,
     Aantal int,
     Prijs decimal,
     foreign key (Factuurnummer) references Factuur(Factuurnummer),
@@ -61,11 +61,11 @@ CREATE TABLE IF NOT EXISTS Bestelling (
     Aantal int,
     Klantcode int,
     Medewerkerscode int,
-    Afgehaald varchar(30),
+    Afgehaald varchar(50),
     foreign key (Artikelcode) references Artikel(Artikelcode),
 	foreign key (Winkelcode) references Winkel(Winkelcode),
 	foreign key (Klantcode) references Klant(Klantcode),
-	foreign key (Mederwerkerscode) references Medewerker(Mederwerkerscode)
+	foreign key (Mederwerkerscode) references Medewerker(Medewerkerscode)
 );
 
 
