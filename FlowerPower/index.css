@@ -3,8 +3,30 @@
 }
 
 body {
-    background-image: url('https://www.estidia.eu/wp-content/uploads/2018/04/Savin-NY-Website-Background-Web.jpg');
+    background-image: url('https://wallpaperaccess.com/full/446984.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* body {
+    background-image: url('https://www.kleinvink.nl/src/Frontend/Files/facilities/images/source/bloemen-bestellen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+#down {
+    width: 30%;
+}
+
+#bloemenwinkel {
+    width: 35%;
+}
+
+form {
+    margin-top: 2%;
+}
+
+.contact {
+    margin-top: 2%;
 }
 
