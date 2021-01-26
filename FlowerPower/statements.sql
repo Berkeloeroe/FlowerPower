@@ -19,35 +19,13 @@ CREATE TABLE IF NOT EXISTS Factuur (
     Factuurnummer int primary key,
     Factuurdatum varchar(50),
     Klantcode int,
-    foreign key (Klantcode) references klant(Klantcode)
-);
-
-CREATE TABLE IF NOT EXISTS Factuurregel (
-    Factuurnummer int,
-    Artikelcode varchar(50),
-    Aantal int,
-    Prijs decimal,
-    foreign key (Factuurnummer) references Factuur(Facturrnummer),
-	foreign key (Artikelcode) references Artikel(Artikelcode)
+    foreign key (Klantcode) references Klant(Klantcode)
 );
 
 CREATE TABLE IF NOT EXISTS Artikel (
     Artikelcode int primary key,
     Artikel varchar(50),
     Prijs decimal
-);
-
-CREATE TABLE IF NOT EXISTS Bestelling (
-    Artikelcode int,
-    Winkelcode int,
-    Aantal int,
-    Klantcode int,
-    Medewerkerscode int,
-    Afgehaald varchar(30),
-    foreign key (Artikelcode) references Artikel(Artikelcode),
-	foreign key (Winkelcode) references Winkel(Winkelcode),
-	foreign key (Klantcode) references Klant(Klantcode),
-	foreign key (Mederwerkerscode) references Medewerker(Mederwerkerscode)
 );
 
 CREATE TABLE IF NOT EXISTS Winkel (
@@ -68,6 +46,27 @@ CREATE TABLE IF NOT EXISTS Medewerker (
     Wachtwoord varchar(50)
 );
 
+CREATE TABLE IF NOT EXISTS Factuurregel (
+    Factuurnummer int,
+    Artikelcode varchar(50),
+    Aantal int,
+    Prijs decimal,
+    foreign key (Factuurnummer) references Factuur(Factuurnummer),
+	foreign key (Artikelcode) references Artikel(Artikelcode)
+);
+
+CREATE TABLE IF NOT EXISTS Bestelling (
+    Artikelcode int,
+    Winkelcode int,
+    Aantal int,
+    Klantcode int,
+    Medewerkerscode int,
+    Afgehaald varchar(30),
+    foreign key (Artikelcode) references Artikel(Artikelcode),
+	foreign key (Winkelcode) references Winkel(Winkelcode),
+	foreign key (Klantcode) references Klant(Klantcode),
+	foreign key (Mederwerkerscode) references Medewerker(Mederwerkerscode)
+);
 
 
 
