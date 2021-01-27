@@ -11,6 +11,7 @@
 </head>
 <body>
 
+<!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <h3>FlowerPower</h3>&nbsp
   <img id="logo" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="picca">
@@ -18,47 +19,32 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+<!-- menu items -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.php">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="loginEmployee.php">Inloggen medewerker</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.php">Contact</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="loginCustomer.php">Inloggen klant<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="registreren.php">Registreren</a>
-      </li>
-    </ul>
-    
+      <li class="nav-item"> <a class="nav-link" href="index.php">Home</a> </li>
+      <li class="nav-item"><a class="nav-link" href="artikelen.php">Artikelen</a></li>
+      <li class="nav-item"> <a class="nav-link" href="loginEmployee.php">Inloggen medewerker</a></li>
+      <li class="nav-item"> <a class="nav-link" href="contact.php">Contact</a></li>
+      <li class="nav-item active"><a class="nav-link" href="loginCustomer.php">Inloggen klant<span class="sr-only">(current)</span></a></li>
+      <li class="nav-item"> <a class="nav-link" href="registreren.php">Registreren</a></li>
+    </ul>  
   </div>
 </nav>
 
-<div class="Form">
-      <form class="" action="index.html" method="post">
-       <center>
-
-       <h2>Inloggen klant</h2><br>
-
-      <div class="col-3">
-      <input type="email" name="email" class="form-control" placeholder="email" required><br>
-
-      <input type="password" name="password" class="form-control" placeholder="wachtwoord" required><br>
-
-      <a class="nav-link" href="registreren.php">Nog geen account?</a><br>
-
-      <button type="button" class="btn btn-success">Inloggen</button>
-      </div>
-
-      <center>
+<!-- form -->
+<body class="text-center">
+    <form class="form-signup">
+      <img class="mb-4" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Inloggen als klant</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Wachtwoord" required="">
+      <br>
+      <button class="btn btn-lg btn-success btn-block" type="submit">Inloggen</button>
+      <p class="mt-5 mb-3 text-muted">© 2021-2021</p>
     </form>
-  </div>
 
 </body>
 </html>

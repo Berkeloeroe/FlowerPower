@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <h3>FlowerPower</h3>&nbsp
   <img id="logo" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="logo">
@@ -17,25 +18,26 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+<!-- menu items -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
   <ul class="navbar-nav mr-auto">
       <li class="nav-item active"><a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="artikelen.php">Artikelen</a></li>
       <li class="nav-item"><a class="nav-link" href="loginEmployee.php">Inloggen medewerker</a></li>
       <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
       <li class="nav-item"><a class="nav-link" href="loginCustomer.php">Inloggen klant</a></li>
       <li class="nav-item"><a class="nav-link" href="registreren.php">Registreren</a></li>
-    </ul>
-    
-    <form class="form-inline my-2 my-lg-0">
-    <a class="btn btn-success" href="loginCustomer.php" role="button">Inloggen</a>
-    </form>
-
+    </ul>  
+    <a class="btn btn-success" href="idk.php" role="button">Inloggen</a>
   </div>
 </nav>
 
+<!-- foto's -->
+<center>
 <img id="down" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReGIIBYukIpsdMJeaMPdd1YDh1feeqeIXNSA&usqp=CAU" alt="down">
-<img id="bloemenwinkel" src="https://miesbloemenplus.nl/image/313swqjcpvd5z0h5/" alt="bloemenwinkel">
+<img id="boeket" src="https://www.scheerhoornbloemen.nl/wp-content/uploads/boeket-supervrolijk-25-euro-scheerhoorn-bloemen-leek.jpg" alt="boeket">
+<img id="bloemenwinkel" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBOQU2jgh1xxGMJSBlCpDWsmPGIy9wPuvojg&usqp=CAU" alt="bloemenwinkel">
+</center>
 
 </body>
 </html>
