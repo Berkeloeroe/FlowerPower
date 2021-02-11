@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="icon" href="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png">
-    <title>FlowerPower</title>
+	<meta charset="UTF-8">
+	<title>FlowerPower</title>
+	<link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
 
-<!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<h3>FlowerPower</h3>&nbsp
-  <img id="logo" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="picca">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="wrapper">
+    <div class="sidebar">
+        <img id="logo" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="logo">
+        <ul>                          
+            <li><a href="index.php"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="loginEmployee.php"><i class="fas fa-user"></i>Inloggen medewerkers</a></li>
+            <li><a href="contact.php"><i class="fas fa-phone-square-alt"></i></i>Contact</a></li>
+            <li><a href="loginCustomer.php"><i class="fas fa-user"></i>Inloggen klant</a></li>
+            <li><a href="registreren.php"><i class="fas fa-address-card"></i>Registreren</a></li>
+        </ul> 
+    </div>
+    <div class="main_content">
+        <div class="header">FlowerPower
+        </div>  
+        <div class="info">
 
-<!-- menu items -->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a> </li>
-      <li class="nav-item"><a class="nav-link" href="artikelen.php">Artikelen</a></li>
-      <li class="nav-item"><a class="nav-link" href="loginEmployee.php">Inloggen medewerker</a> </li>
-      <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a>  </li>
-      <li class="nav-item"><a class="nav-link" href="loginCustomer.php">Inloggen klant</a> </li>
-      <li class="nav-item active"><a class="nav-link" href="registreren.php">Registreren<span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<!-- form -->
-<body class="text-center">
-    <form class="form-signup">
-      <img class="mb-4" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="" width="72" height="72">
+        <!-- form -->
+        <center>
+    <form action="includes/register.php" method="POST" class="form-signup">
+      <img class="mb-4" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="bloem" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Account aanmaken</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Wachtwoord" required="">
-      <br>
-      <button class="btn btn-lg btn-success btn-block" type="submit">Aanmaken</button>
+
+        <input type="text" name="Voorletters" id="inputVoorletters" class="form-control" placeholder="Voornaam" required>
+        <input type="text" name="Tussenvoegsels" id="inputTussenvoegsels" class="form-control" placeholder="Tussenvoegsels" required>
+        <input type="text" name="Achternaam" id="inputAchternaam" class="form-control" placeholder="Achternaam" required>
+        <input type="text" name="Adres" id="inputAdres" class="form-control" placeholder="Adres" required>
+        <input type="text" name="Postcode" id="inputPostcode" class="form-control" placeholder="Postcode" required>
+        <input type="text" name="Woonplaats" id="inputWoonplaats" class="form-control" placeholder="Woonplaats" required>
+        <input type="text" name="Geboortedatum" id="inputGeboortedatum" class="form-control" placeholder="Geboortedatum" required>
+        <input type="text" name="Gebruikersnaam" id="inputGebruikersnaam" class="form-control" placeholder="Gebruikersnaam" required>
+        <input type="password" name="Wachtwoord" id="inputWachtwoord" class="form-control" placeholder="Wachtwoord" required><br>
+    
+      <button class="btn btn-lg btn-success btn-block" type="submit" name="submit">Aanmaken</button>
       <p class="mt-5 mb-3 text-muted">© 2021-2021</p>
     </form>
+    </center>
+       
+      </div>
+    </div>
+</div>
 
 </body>
 </html>
+
+
+       
