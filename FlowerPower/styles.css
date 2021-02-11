@@ -34,7 +34,7 @@ body {
 
 .wrapper .sidebar ul li {
   padding: 15px;
-  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid #96949e;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -54,27 +54,6 @@ body {
 
 .wrapper .sidebar ul li:hover a {
   color: #fff;
-}
-
-.wrapper .sidebar .social_media {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.wrapper .sidebar .social_media a {
-  display: block;
-  width: 40px;
-  background: #594f8d;
-  height: 40px;
-  line-height: 45px;
-  text-align: center;
-  margin: 0 5px;
-  color: #bdb8d7;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .wrapper .main_content {

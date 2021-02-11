@@ -10,7 +10,7 @@
 </head>
 <body class="customer">
 
-
+<!-- sidebar -->
 <div class="wrapper">
     <div class="sidebar">
         <img id="logo" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="logo">
@@ -24,10 +24,11 @@
     </div>
     <div class="main_content">
         <div class="header">FlowerPower
+          <a class="btn btn-success float-right" href="registreren.php" role="button">Registreren</a>
         </div>  
         <div class="info">
 
-<!-- form -->
+      <!-- form -->
       <center>
         <form action="includes/login.inc.php" method="POST" class="form-signup">
           <img class="mb-4" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="" width="72" height="72">
@@ -42,7 +43,6 @@
       </div>
     </div>
 </div>
-
 
 </body>
 </html>

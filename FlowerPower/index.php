@@ -9,7 +9,8 @@
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
-
+  
+<!-- sidebar -->
 <div class="wrapper">
     <div class="sidebar">
         <img id="logo" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="logo">
@@ -30,7 +31,7 @@
             <img id="down" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReGIIBYukIpsdMJeaMPdd1YDh1feeqeIXNSA&usqp=CAU" alt="down">
             <img id="boeket" src="https://www.scheerhoornbloemen.nl/wp-content/uploads/boeket-supervrolijk-25-euro-scheerhoorn-bloemen-leek.jpg" alt="boeket">
             <img id="bloemenwinkel" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBOQU2jgh1xxGMJSBlCpDWsmPGIy9wPuvojg&usqp=CAU" alt="bloemenwinkel">
-        </center>
+          </center>
       </div>
     </div>
 </div>

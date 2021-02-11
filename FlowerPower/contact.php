@@ -9,7 +9,8 @@
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
-
+  
+<!-- sidebar -->
 <div class="wrapper">
     <div class="sidebar">
         <img id="logo" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="logo">
@@ -25,6 +26,7 @@
         <div class="header">FlowerPower
           <a class="btn btn-success float-right" href="index.php" role="button">Registreren</a>
         </div>  
+
         <!-- contact info -->
         <div class="contact">
           <center>
@@ -34,6 +36,7 @@
             <em class="fa fa-envelope">&nbsp flowerpower@outlook.com</em>
           </center>
         </div>
+
     </div>
 </div>
 
