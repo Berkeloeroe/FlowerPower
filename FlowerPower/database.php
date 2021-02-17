@@ -1,47 +1,57 @@
-<?php
+<?php 
 
 class database{
 
-    // properties
+    // scope -> private, public, protected
+    // eigenschappen - properties
     private $host;
-    private $username; // username van je db
-    private $password; // password van je db
-    private $db;
-    private $dbh; // dbhost/connectie
+    private $username; // username van je database 'root'
+    private $password; // password van je database ''
+    private $database;
+    private $dbh;
 
-    // wordt slechts één keer aangeroepen en dus uitgevoerd
     public function __construct(){
-        $this->host = 'localhost'; // ip adres 127.0.0.1
+        $this->host = 'localhost';
         $this->username = 'root';
         $this->password = '';
-        $this->db = 'flowerpower';
+        $this->database = 'flowerpower';
 
-        try{
-            $dsn = "mysql:host=$this->host;dbname=$this->db";
+        try {
+
+            $dsn = "mysql:host=$this->host;dbname=$this->database";
             $this->dbh = new PDO($dsn, $this->username, $this->password);
-        }catch(PDOException $e){
-            die("Unable to connect: " . $e.getMessage());
+
+        } catch (PDOException $exception) {
+            die("Unable to connect: " . $exception.getMessage());
         }
     }
 
-    public function select($statement, $username){
+    public function select($username){
 
-        //$sqsl = "SELECT * FROM table";
-        
+        $sql = "SELECT username, password, email FROM users WHERE username = :uname ;"; // :uname is een named placeholder
+
         // prepared statement
-        $stmt = $this->dbh->prepare($statement);
+        $statement = $this->dbh->prepare($sql);
 
-        // execute
-        $stmt->execute(['user' => $username]);
+        // uitvoeren prepared statement
+        $statement->execute([
+            'uname'=>$username
+        ]);
 
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        // $result['username'] / $result['password']
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+        ['username'=>'nilu', 'password'=> 'helloworld', 'email'=>'n.lican1@rocva.nl'];
+
+
+        echo $result['username'];
+        echo $result['password'];
+        echo $result['email'];
+
     }
-
 }
 
-$obj = new database();
-$obj->select("SELECT username, password FROM table WHERE gebruiker = :user");
+// index.php:
+$object = new database();
+$object->select();
 
-<?
-
+?>
