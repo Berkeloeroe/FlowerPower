@@ -6,7 +6,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Truculenta", sans-serif;
 }
 
 .header {
@@ -15,8 +15,10 @@
   margin-right: auto;
 }
 
-body {
-  background-image: url("https://i.pinimg.com/originals/b3/b2/15/b3b2157c984e78c7f780b78211da5303.jpg");
+.test {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrapper {
