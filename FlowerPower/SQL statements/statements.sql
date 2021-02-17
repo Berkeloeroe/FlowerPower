@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS flowerpower;
 USE flowerpower;
 
 CREATE TABLE IF NOT EXISTS Klant (
-    Klantcode int primary key,
+    Klantcode int primary key NOT NULL AUTO_INCREMENT,
     Voorletters varchar(255),
     Tussenvoegsels varchar(255),
     Achternaam varchar(255),
@@ -16,20 +16,20 @@ CREATE TABLE IF NOT EXISTS Klant (
 );
 
 CREATE TABLE IF NOT EXISTS Factuur (
-    Factuurnummer int primary key,
+    Factuurnummer int primary key NOT NULL AUTO_INCREMENT,
     Factuurdatum varchar(255),
     Klantcode int,
     foreign key (Klantcode) references Klant(Klantcode)
 );
 
 CREATE TABLE IF NOT EXISTS Artikel (
-    Artikelcode int primary key,
+    Artikelcode int primary key NOT NULL AUTO_INCREMENT,
     Artikel varchar(255),
     Prijs decimal
 );
 
 CREATE TABLE IF NOT EXISTS Winkel (
-    Winkelcode int primary key,
+    Winkelcode int primary key NOT NULL AUTO_INCREMENT,
     Winkelnaam varchar(255),
     Winkeladres  varchar(255),
     Winkelpostcode varchar(255),
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS Winkel (
 );
 
 CREATE TABLE IF NOT EXISTS Medewerker (
-    Medewerkerscode int primary key,
+    Medewerkerscode int primary key NOT NULL AUTO_INCREMENT,
     Voorletters varchar(255),
     Voorvoegsels  varchar(255),
     Achternaam varchar(255),
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS Medewerker (
 );
 
 CREATE TABLE IF NOT EXISTS Factuurregel (
-    Factuurnummer int,
+    Factuurnummer int NOT NULL AUTO_INCREMENT,
     Artikelcode int,
     Aantal int,
     Prijs decimal,
@@ -56,7 +56,8 @@ CREATE TABLE IF NOT EXISTS Factuurregel (
 );
 
 CREATE TABLE IF NOT EXISTS Bestelling (
-    Artikelcode int,
+    Bestellingsnummer int primary key NOT NULL AUTO_INCREMENT,
+    Artikelcode int NOT NULL AUTO_INCREMENT,
     Winkelcode int,
     Aantal int,
     Klantcode int,
