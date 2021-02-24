@@ -1,57 +1,94 @@
-<?php 
+<?php
+class database {
 
-class database{
-
-    // scope -> private, public, protected
-    // eigenschappen - properties
+    //properties
     private $host;
-    private $username; // username van je database 'root'
-    private $password; // password van je database ''
-    private $database;
     private $dbh;
+    private $user;
+    private $pass;
+    private $db;
 
-    public function __construct(){
+    function __construct(){
         $this->host = 'localhost';
-        $this->username = 'root';
-        $this->password = '';
-        $this->database = 'flowerpower';
+        $this->user = 'root';
+        $this->pass = '';
+        $this->db = 'flowerpower';
 
-        try {
+        try{
+            $dsn = "mysql:host=$this->host;dbname=$this->db";
+            $this->dbh = new PDO($dsn, $this->user, $this->pass);
+        }catch(PDOException $e){
+            die("Unable to connect: " . $e->getMessage());
 
-            $dsn = "mysql:host=$this->host;dbname=$this->database";
-            $this->dbh = new PDO($dsn, $this->username, $this->password);
-
-        } catch (PDOException $exception) {
-            die("Unable to connect: " . $exception.getMessage());
         }
     }
 
-    public function select($username){
+        function insertCustomerUser($username, $password){
+            $sql = "INSERT INTO klant(klantcode, gebruikersnaam, wachtwoord) VALUES (:id, :username, :password)"; 
 
-        $sql = "SELECT username, password, email FROM users WHERE username = :uname ;"; // :uname is een named placeholder
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->execute([
+                'id'=>NULL,
+                'username'=>$username,
+                'password'=>password_hash($password, PASSWORD_DEFAULT)
+            ]);
 
-        // prepared statement
-        $statement = $this->dbh->prepare($sql);
+            
+        }
 
-        // uitvoeren prepared statement
-        $statement->execute([
-            'uname'=>$username
-        ]);
+        function insertEmployeeUser($username, $password){
+            $sql = "INSERT INTO medewerker(medewerkerscode, gebruikersnaam, wachtwoord) VALUES (:id, :username, :password)"; 
 
-        $result = $statement->fetch(PDO::FETCH_ASSOC);
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->execute([
+                'id'=>NULL,
+                'username'=>$username,
+                'password'=>password_hash($password, PASSWORD_DEFAULT)
+            ]);
 
-        ['username'=>'nilu', 'password'=> 'helloworld', 'email'=>'n.lican1@rocva.nl'];
+            
+        }
 
+function loginmedewerker($username, $pwd){
+        $sql="SELECT * FROM medewerker WHERE gebruikersnaam = :uname";
 
-        echo $result['username'];
-        echo $result['password'];
-        echo $result['email'];
+        $stmt = $this->dbh->prepare($sql); 
+        $stmt->execute(['uname'=>$username]); 
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC); 
+        if($result){
+            if(password_verify($pwd, $result["wachtwoord"])) {
+                echo "Valid Password!";
+                header("location:");
+            } else {
+                echo "Invalid Password!";
+            }
+        } else {
+            echo "Invalid Login";
+        }
 
     }
-}
 
-// index.php:
-$object = new database();
-$object->select();
+ function loginklant($username, $pwd){
+        $sql="SELECT * FROM klant WHERE gebruikersnaam = :uname";
+
+        $stmt = $this->dbh->prepare($sql); 
+        $stmt->execute(['uname'=>$username]); 
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC); 
+        if($result){
+            if(password_verify($pwd, $result["wachtwoord"])) {
+                echo "Valid Password!";
+                header("Location:");
+            } else {
+                echo "Invalid Password!";
+            }
+        } else {
+            echo "Invalid Login";
+        }
+
+    }
+
+}
 
 ?>

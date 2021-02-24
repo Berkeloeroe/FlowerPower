@@ -3,6 +3,7 @@
 include_once 'sidebar/sidebar.php'
 
 ?>
+
           <a class="btn btn-success float-right" href="registreren.php" role="button">Registreren</a>
         </div>  
         <div class="info">
