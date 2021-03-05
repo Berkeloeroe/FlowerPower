@@ -1,6 +1,6 @@
 <?php
 
-include_once 'sidebar/sidebarKlant.php'
+include_once 'sidebars/loginKlant.php';
 
 ?>
 

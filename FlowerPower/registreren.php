@@ -1,6 +1,6 @@
 <?php
 
-include_once 'sidebar/sidebar.php'
+include_once 'sidebars/sidebar.php'
 
 ?>
 
@@ -8,7 +8,7 @@ include_once 'sidebar/sidebar.php'
 <div class="info">
                <!-- form -->
                <center>
-                  <form action="registreren.php" method="POST" class="form-signup">
+                  <form action="register.php" method="POST" class="form-signup">
                      <img class="mb-4" src="https://pics.clipartpng.com/Pink_Flower_PNG_Clipart-173.png" alt="bloem" width="72" height="72">
                      <h1 class="h3 mb-3 font-weight-normal">Account aanmaken</h1>
                      <input type="text" name="Voorletters" id="inputVoorletters" class="form-control" placeholder="Voornaam" required>

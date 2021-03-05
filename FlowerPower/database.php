@@ -19,7 +19,6 @@ class database {
             $this->dbh = new PDO($dsn, $this->user, $this->pass);
         }catch(PDOException $e){
             die("Unable to connect: " . $e->getMessage());
-
         }
     }
 
@@ -31,9 +30,7 @@ class database {
                 'id'=>NULL,
                 'username'=>$username,
                 'password'=>password_hash($password, PASSWORD_DEFAULT)
-            ]);
-
-            
+            ]); 
         }
 
         function insertEmployeeUser($username, $password){
@@ -44,9 +41,7 @@ class database {
                 'id'=>NULL,
                 'username'=>$username,
                 'password'=>password_hash($password, PASSWORD_DEFAULT)
-            ]);
-
-            
+            ]);    
         }
 
 function loginmedewerker($username, $pwd){
@@ -66,7 +61,6 @@ function loginmedewerker($username, $pwd){
         } else {
             echo "Invalid Login";
         }
-
     }
 
  function loginklant($username, $pwd){
@@ -86,9 +80,7 @@ function loginmedewerker($username, $pwd){
         } else {
             echo "Invalid Login";
         }
-
     }
-
 }
 
 ?>

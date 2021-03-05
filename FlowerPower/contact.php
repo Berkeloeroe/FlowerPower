@@ -1,6 +1,6 @@
 <?php
 
-include_once 'sidebar/sidebar.php'
+include_once 'sidebars/sidebar.php'
 
 ?>
    

@@ -1,6 +1,6 @@
 <?php
 
-include_once 'sidebar/sidebarMedewerker.php'
+include_once 'sidebars/loginMedewerker.php'
 
 ?>
 
