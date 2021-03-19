@@ -142,3 +142,17 @@ form {
   background-color: white;
   border-radius: 10px;
 }
+
+table {
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 25px;
+  margin-top: 2%;
+  box-shadow: 0px 0px 10px black;
+  background-color: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+}

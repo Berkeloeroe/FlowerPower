@@ -19,7 +19,7 @@
                <li><a href="medewerker.php"><em class="fas fa-home"></em>Home</a></li>
                <li><a href="overzicht_artikelen.php"><em class="fas fa-address-card"></em>Artikelen</a></li>
                <li><a href="overzicht_medewerker.php"><em class="fas fa-user"></em>Medewerkers</a></li>
-               <li><a href="#.php"><em class="fas fa-address-card"></em>Bestellingen</a></li>
+               <li><a href="bestellingen.php"><em class="fas fa-address-card"></em>Bestellingen</a></li>
             </ul>
          </div>
          <div class="main_content">
